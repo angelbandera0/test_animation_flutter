@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_3d_controller/flutter_3d_controller.dart';
+import 'package:untitled1/challenges/coffee/coffee_view.dart';
 import 'package:untitled1/implict_animation.dart';
 import 'package:untitled1/tween_animation.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -88,6 +90,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   return TransformView();
                 }));
               }, child: Text("Transform")),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return CoffeeView();
+                }));
+              }, child: Text("Coffee")),
+
 
             ],
           ),
